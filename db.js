@@ -1,29 +1,15 @@
-const { MongoClient } = require('mongodb');
-
+const mongoose = require('mongoose');
 require('dotenv').config({
     path: `.env.${process.env.NODE_ENV}`
 });
-const uri = process.env.MONGODB_URI;
-let dbConnection;
 
-if (!uri) {
-    throw new Error('Please add Mongo URI to .env.*');
-}
+const connectToDatabase = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log('Connected to MongoDB');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+  }
+};
 
-module.exports = {
-    connectToDb: (cb) => {
-        MongoClient.connect(uri)
-        .then((client) => {
-            dbConnection = client.db();
-            return cb()
-        })
-        .catch((err) => {
-            console.log(err)
-            return cb(err)
-        })
-    },
-
-    getDb: () => dbConnection
-}
-
-
+module.exports = connectToDatabase;

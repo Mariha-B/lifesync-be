@@ -1,23 +1,28 @@
 const express = require('express');
-require('dotenv').config();
-const { connectToDb, getDb } = require('./db');
-const { PORT } = process.env;
+const User = require('./models/User'); 
+
 const app = express();
 
+// Middleware
 app.use(express.json());
 
-let db
-
-connectToDb((err)=> {
-    if(!err){
-        app.listen(PORT, ()=>{
-            console.log('app listening on port 9090');
-        })
-        db = getDb();
-    }
-})
-
+// Routes
 app.get('/', (req, res) => {
+  res.json({ msg: 'Welcome to lifeSync API' });
+});
 
-    res.send({msg: "Welcome to lifeSync API"})
-})
+app.get('/users', async (req, res) => {
+  try {
+    const users = await User.find(); 
+    res.json(users); 
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' }); 
+  }
+});
+
+//Error Handling
+app.all("*", (req, res) => {
+    res.status(404).send({ msg: "Invalid Endpoint" });
+  });
+  
+module.exports = app;

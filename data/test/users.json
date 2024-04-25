@@ -1,0 +1,52 @@
+[
+    {
+      "username": "jane_smith",
+      "email": "jane_smith@example.com",
+      "password": "Pw8&nJq4k%Tz"
+    },
+    {
+      "username": "alex_johnson",
+      "email": "alex_johnson@example.com",
+      "password": "Bz5@kLx9s%Gm"
+    },
+    {
+      "username": "samantha_doe",
+      "email": "samantha_doe@example.com",
+      "password": "Fs6&rNm2t%Hz"
+    },
+    {
+      "username": "matt_williams",
+      "email": "matt_williams@example.com",
+      "password": "Qv7#bFt3w%Ky"
+    },
+    {
+      "username": "laura_brown",
+      "email": "laura_brown@example.com",
+      "password": "Hx6&jPs5m%Rq"
+    },
+    {
+      "username": "chris_taylor",
+      "email": "chris_taylor@example.com",
+      "password": "Dz9#vHq6r%Ly"
+    },
+    {
+      "username": "emily_anderson",
+      "email": "emily_anderson@example.com",
+      "password": "Jq8&mGw2k%Bx"
+    },
+    {
+      "username": "daniel_miller",
+      "email": "daniel_miller@example.com",
+      "password": "Gy5&nWs4t%Pz"
+    },
+    {
+      "username": "linda_thomas",
+      "email": "linda_thomas@example.com",
+      "password": "Ev4#hXp7j%Kq"
+    },
+    {
+      "username": "ryan_davis",
+      "email": "ryan_davis@example.com",
+      "password": "Sz6#mQr9t%Px"
+    }
+  ]

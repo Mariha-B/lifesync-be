@@ -19,5 +19,5 @@ connectToDb((err)=> {
 
 app.get('/', (req, res) => {
 
-    res.json({msg: "Welcome to lifeSync API"})
+    res.send({msg: "Welcome to lifeSync API"})
 })
